@@ -22,7 +22,9 @@ jobs:
 
       # Verifica que sonar-scanner esté disponible
       - name: Check SonarScanner version
+        shell: pwsh
         run: |
+          $env:PATH = "C:\\Users\\Usuario\\Desktop\\sonar-scanner-6.2.1.4610-windows-x64\\bin" + ";" + $env:PATH
           sonar-scanner --version
 
       # Ejecuta el análisis de SonarQube
