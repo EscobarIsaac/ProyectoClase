@@ -9,18 +9,28 @@ jobs:
   build:
     name: Build and analyze
     runs-on: windows-latest
-    
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
-      # Establece la ruta de sonar-scanner manualmente
-      - name: Add SonarScanner to PATH
+      # Paso: Descargar e instalar sonar-scanner si no está en el PATH
+      - name: Install SonarScanner
         shell: pwsh
         run: |
-          $env:PATH = "C:\\Users\\Usuario\\Desktop\\sonar-scanner-6.2.1.4610-windows-x64\\bin" + ";" + $env:PATH
-          Write-Host "Updated PATH: $env:PATH"
+          # Crear el directorio de instalación
+          $scannerFolder = "D:\sonar-scanner"
+          $scannerZip = "$scannerFolder\sonar-scanner-cli.zip"
+          $scannerUri = "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-6.2.1.4610-windows-x64.zip"
+          
+          # Descargar e instalar sonar-scanner
+          Invoke-WebRequest -Uri $scannerUri -OutFile $scannerZip
+          Expand-Archive -Path $scannerZip -DestinationPath $scannerFolder
+          
+          # Añadir sonar-scanner al PATH
+          $env:PATH = "$scannerFolder\sonar-scanner-cli\bin" + ";" + $env:PATH
+          Write-Host "PATH updated to: $env:PATH"
         
       # Verifica si sonar-scanner está disponible
       - name: Check SonarScanner version
