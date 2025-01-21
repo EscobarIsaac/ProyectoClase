@@ -9,29 +9,29 @@ jobs:
   build:
     name: Build and analyze
     runs-on: windows-latest
-
+    
     steps:
-      # Checkout del repositorio
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
-      # Cache para sonar-scanner (evita la descarga en cada ejecución)
-      - name: Cache SonarScanner
-        uses: actions/cache@v2
-        with:
-          path: ~/.sonar/cache
-          key: sonar-scanner-cli-${{ runner.os }}-${{ hashFiles('**/sonar-project.properties') }}
-          restore-keys: |
-            sonar-scanner-cli-${{ runner.os }}-
+      # Configura la ruta local de SonarScanner
+      - name: Set up SonarScanner from local installation
+        run: |
+          echo "C:\\Users\\Usuario\\Desktop\\sonar-scanner-6.2.1.4610-windows-x64\\bin" >> $GITHUB_PATH
 
-      # Acción de SonarQube para escanear el proyecto
+      # Verifica que sonar-scanner esté disponible
+      - name: Check SonarScanner version
+        run: |
+          sonar-scanner --version
+
+      # Ejecuta el análisis de SonarQube
       - uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-      # Si deseas que falle el trabajo cuando la puerta de calidad esté en rojo, descomenta las siguientes líneas.
+      # Si deseas fallar el trabajo si el Quality Gate es rojo, descomenta esto:
       # - uses: SonarSource/sonarqube-quality-gate-action@v1
       #   timeout-minutes: 5
       #   env:
