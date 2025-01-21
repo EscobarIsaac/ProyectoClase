@@ -15,16 +15,17 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
-      # Configura la ruta local de SonarScanner
-      - name: Set up SonarScanner from local installation
-        run: |
-          echo "C:\\Users\\Usuario\\Desktop\\sonar-scanner-6.2.1.4610-windows-x64\\bin" >> $GITHUB_PATH
-
-      # Verifica que sonar-scanner esté disponible
-      - name: Check SonarScanner version
+      # Establece la ruta de sonar-scanner manualmente
+      - name: Add SonarScanner to PATH
         shell: pwsh
         run: |
           $env:PATH = "C:\\Users\\Usuario\\Desktop\\sonar-scanner-6.2.1.4610-windows-x64\\bin" + ";" + $env:PATH
+          Write-Host "Updated PATH: $env:PATH"
+        
+      # Verifica si sonar-scanner está disponible
+      - name: Check SonarScanner version
+        shell: pwsh
+        run: |
           sonar-scanner --version
 
       # Ejecuta el análisis de SonarQube
