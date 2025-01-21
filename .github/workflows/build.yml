@@ -15,35 +15,25 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
-      # Paso: Descargar e instalar sonar-scanner si no está en el PATH
-      - name: Install SonarScanner
+      # Actualizar el PATH para incluir sonar-scanner
+      - name: Update PATH to include sonar-scanner
         shell: pwsh
         run: |
-          # Crear el directorio de instalación
-          $scannerFolder = "D:\sonar-scanner"
-          $scannerZip = "$scannerFolder\sonar-scanner-cli.zip"
-          $scannerUri = "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-6.2.1.4610-windows-x64.zip"
-          
-          # Descargar e instalar sonar-scanner
-          Invoke-WebRequest -Uri $scannerUri -OutFile $scannerZip
-          Expand-Archive -Path $scannerZip -DestinationPath $scannerFolder
-          
-          # Añadir sonar-scanner al PATH
-          $env:PATH = "$scannerFolder\sonar-scanner-cli\bin" + ";" + $env:PATH
-          Write-Host "PATH updated to: $env:PATH"
-        
-      # Verifica si sonar-scanner está disponible
-      - name: Check SonarScanner version
+          $env:PATH = "C:\\Users\\Usuario\\Desktop\\sonar-scanner-6.2.1.4610-windows-x64\\bin" + ";" + $env:PATH
+          Write-Host "Updated PATH: $env:PATH"
+
+      # Verificar si sonar-scanner está funcionando
+      - name: Check if SonarScanner is available
         shell: pwsh
         run: |
           sonar-scanner --version
 
-      # Ejecuta el análisis de SonarQube
+      # Ejecutar el análisis de SonarQube
       - uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-
+          
       # Si deseas fallar el trabajo si el Quality Gate es rojo, descomenta esto:
       # - uses: SonarSource/sonarqube-quality-gate-action@v1
       #   timeout-minutes: 5
