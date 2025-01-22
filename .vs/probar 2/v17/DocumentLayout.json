@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\.github\\workflows\\build.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\build.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\tests\\TrabajoClase.Tests\\HelloControllerTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\TrabajoClase.Tests\\HelloControllerTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\src\\TrabajoClase\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\TrabajoClase\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\src\\TrabajoClase\\Controllers\\HelloController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\TrabajoClase\\Controllers\\HelloController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "build.yml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\.github\\workflows\\build.yml",
+              "RelativeDocumentMoniker": ".github\\workflows\\build.yml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\.github\\workflows\\build.yml",
+              "RelativeToolTip": ".github\\workflows\\build.yml",
+              "ViewState": "AgIAACYAAADgnTVD3VkWwC4AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-01-22T02:39:46.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HelloControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\tests\\TrabajoClase.Tests\\HelloControllerTests.cs",
+              "RelativeDocumentMoniker": "tests\\TrabajoClase.Tests\\HelloControllerTests.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\tests\\TrabajoClase.Tests\\HelloControllerTests.cs",
+              "RelativeToolTip": "tests\\TrabajoClase.Tests\\HelloControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T02:39:39.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\src\\TrabajoClase\\Program.cs",
+              "RelativeDocumentMoniker": "src\\TrabajoClase\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\src\\TrabajoClase\\Program.cs",
+              "RelativeToolTip": "src\\TrabajoClase\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T02:39:36.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HelloController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\src\\TrabajoClase\\Controllers\\HelloController.cs",
+              "RelativeDocumentMoniker": "src\\TrabajoClase\\Controllers\\HelloController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\probar\\probar 2\\src\\TrabajoClase\\Controllers\\HelloController.cs",
+              "RelativeToolTip": "src\\TrabajoClase\\Controllers\\HelloController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T02:39:32.825Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
